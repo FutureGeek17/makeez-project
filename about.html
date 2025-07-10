@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Makeez</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-orange-50 to-white">
+  <!-- Sticky Navigation Bar (copied from index.html) -->
+  <nav class="sticky top-0 z-50 shadow-md" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);">
+    <div class="max-w-6xl mx-auto px-2 sm:px-4">
+      <div class="flex flex-wrap justify-between items-center h-20 md:h-24">
+        <div class="flex items-center fly-in pop-hover h-full">
+          <a href="index.html">
+            <img src="images/New Instagram Logo (Dec 2024).png" alt="Makeez Logo" class="h-16 md:h-20 w-auto object-contain" />
+          </a>
+        </div>
+        <div class="hidden md:flex space-x-6 sm:space-x-10 items-center h-full">
+          <a href="index.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Home</a>
+          <a href="menu.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Menu</a>
+          <a href="about.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">About Us</a>
+          <a href="locations.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Locations</a>
+        </div>
+        <!-- Sandwich Bar Icon and Clean Dropdown (relative container) -->
+        <div class="relative flex items-center">
+          <button id="sandwich-bar-btn" class="ml-4 flex items-center justify-center h-12 w-12 rounded-full hover:bg-gray-100 focus:outline-none" aria-label="Sandwich Bar">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+          <!-- Clean Dropdown Menu -->
+          <div id="sandwich-dropdown" class="hidden absolute right-0 top-full mt-2 w-52 rounded-xl shadow-lg bg-white z-50 border border-black animate-clean-dropdown">
+            <a href="index.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">Home</a>
+            <a href="menu.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">Menu</a>
+            <a href="about.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">About Us</a>
+            <a href="locations.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">Locations</a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-gold-600 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-2 sm:px-4 pb-4 space-y-1 bg-black">
+      <a href="index.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Home</a>
+      <a href="menu.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Menu</a>
+      <a href="about.html" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">About Us</a>
+      <a href="locations.html" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Locations</a>
+    </div>
+  </nav>
+  <!-- Gold Gradient Bar -->
+  <div class="w-full h-2 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 mb-2"></div>
+  <!-- Main Content -->
+  <main class="flex-1 w-full max-w-3xl mx-auto py-12 px-4 sm:px-8">
+    <div class="bg-white rounded-2xl shadow-lg border-2 border-yellow-400 p-6 md:p-12 flex flex-col items-center">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center fly-in">About <span class="text-[#bfa100]">Makeez</span></h1>
+      <img src="images/wetransfer_menu-item-images_2025-07-08_1531/Truffle Burger.jpg" alt="Makeez Food" class="w-full max-w-md rounded-xl shadow mb-8 border-4 border-yellow-400 object-cover transition-transform duration-200 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-300/40 cursor-pointer fly-in" />
+      <p class="text-lg text-gray-700 leading-relaxed text-center mb-2 fly-in">Welcome to Makeez—Dubai's ultimate late-night kitchen for flavor seekers in Al Khawaneej and Za’abeel. Operating from 1 PM to the early hours, our no-frills, delivery-first concept brings gourmet-style burgers, juicy steaks, loaded fries, and fusion noodles right to your door.</p>
+      <p class="text-lg text-gray-700 leading-relaxed text-center mb-2 fly-in">Our crew is passionate about serving bold, crave-worthy comfort food made with care. From our famous Buffalo Chicken Sliders and Truffle Burger to cheesy Korean noodles and decadent desserts, every dish is designed to delight.</p>
+      <p class="text-lg text-gray-700 leading-relaxed text-center mb-2 fly-in">Makeez is the go-to spot for those midnight munchies. We combine top-quality ingredients, vibrant flavors, and seamless delivery to redefine fast food—no dine-in, no fuss, just flavor.</p>
+      <p class="text-lg text-gray-700 leading-relaxed text-center mb-8 fly-in">Craving something unforgettable? Order now and taste the Makeez difference.</p>
+      <div class="flex justify-center fly-in">
+        <a href="menu.html" class="px-8 py-3 bg-yellow-400 text-black rounded-full font-semibold shadow-lg hover:bg-yellow-500 transition-all text-lg">Order Now</a>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="shadow-inner py-8 text-white text-xs mt-8" style="background: #000;">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 text-left">
+      <!-- Locations -->
+      <div>
+        <div class="font-semibold text-yellow-400 text-base mb-2">Our Locations</div>
+        <a href="https://www.google.com/maps/place/Makeez+Al+Khawaneej+Walk/@25.2416,55.4742,17z" target="_blank" rel="noopener" class="block text-white hover:text-yellow-400 hover:underline pop-hover mb-1">Makeez Al Khawaneej Walk</a>
+        <a href="https://www.google.com/maps/place/Makeez+Wasl+Vita+Mall/@25.1321,55.2102,17z" target="_blank" rel="noopener" class="block text-white hover:text-yellow-400 hover:underline pop-hover">Makeez Wasl Vita Mall</a>
+      </div>
+      <!-- Contact -->
+      <div>
+        <div class="font-semibold text-yellow-400 text-base mb-2">Contact Us</div>
+        <a href="tel:+971501234567" class="block text-white hover:text-yellow-400 hover:underline pop-hover mb-1">+971 50 123 4567</a>
+        <a href="mailto:info@makeez.com" class="block text-white hover:text-yellow-400 hover:underline pop-hover">info@makeez.com</a>
+      </div>
+      <!-- Hours -->
+      <div>
+        <div class="font-semibold text-yellow-400 text-base mb-2">Opening Hours</div>
+        <div class="text-white">10:00 AM – 12:00 AM</div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-4 text-center text-gray-400 text-xs">&copy; 2025 Makeez Restaurant. All rights reserved.</div>
+  </footer>
+  <script>
+    // Loader logic (on page load)
+    window.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 700);
+      }, 900);
+    });
+    // Show loader on navigation
+    document.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
+      document.querySelectorAll('a').forEach(link => {
+        const href = link.getAttribute('href');
+        // Only for internal links (not #, not external, not _blank)
+        if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && href !== '#' && !link.hasAttribute('target')) {
+          link.addEventListener('click', function(e) {
+            // Ignore if modifier keys are pressed (open in new tab/window)
+            if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            loader.style.display = 'flex';
+            loader.style.opacity = '1';
+          });
+        }
+      });
+    });
+    // Clean sandwich dropdown logic
+    const sandwichBtn = document.getElementById('sandwich-bar-btn');
+    const sandwichDropdown = document.getElementById('sandwich-dropdown');
+    if (sandwichBtn && sandwichDropdown) {
+      sandwichBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sandwichDropdown.classList.toggle('hidden');
+      });
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!sandwichDropdown.classList.contains('hidden')) {
+          if (!sandwichDropdown.contains(e.target) && e.target !== sandwichBtn) {
+            sandwichDropdown.classList.add('hidden');
+          }
+        }
+      });
+      // Close dropdown when clicking a link
+      sandwichDropdown.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          sandwichDropdown.classList.add('hidden');
+        });
+      });
+    }
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+    // Fly-in animation for all .fly-in elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const flyIns = document.querySelectorAll('.fly-in');
+      flyIns.forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add('visible');
+        }, 150 + i * 100);
+      });
+    });
+  </script>
+</body>
+</html> 
