@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions - Makeez Restaurant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .pop-hover { transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1); }
+    .pop-hover:hover, .pop-hover:focus { transform: scale(1.07); box-shadow: 0 6px 24px 0 rgba(255,215,0,0.15); z-index: 1; }
+    body { background: #fff; }
+    header, main, section, footer { background: #fff; }
+    h1, h2, h3 { color: #FFD700 !important; }
+    .text-orange-600, .text-orange-500 { color: #FFD700 !important; }
+    .border-orange-100, .border-orange-500 { border-color: #FFD700 !important; }
+    .bg-orange-50, .bg-orange-100 { background: #fff !important; }
+    .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500 { color: #111 !important; }
+    .bg-white { background: #fff !important; }
+    .shadow-inner, .shadow, .shadow-md { box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07); }
+    a.text-orange-600, a.text-orange-500 { color: #FFD700 !important; }
+    a.text-orange-600:hover, a.text-orange-500:hover { color: #111 !important; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Loading Overlay -->
+  <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white bg-opacity-95 transition-opacity duration-700">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-orange-500 border-b-4 border-orange-200 mb-6"></div>
+    <span class="text-2xl font-bold text-orange-500 tracking-wide">TastyBites</span>
+  </div>
+  <header class="bg-white shadow-md py-6 px-4 text-center">
+    <h1 class="text-3xl font-bold text-orange-600">Terms &amp; Conditions</h1>
+  </header>
+  <main class="flex-1 max-w-3xl mx-auto py-10 px-4">
+    <section class="bg-white rounded-lg shadow p-6 mb-8">
+      <h2 class="text-xl font-semibold text-orange-500 mb-4">1. Introduction</h2>
+      <p class="mb-4">This is a placeholder for the Terms &amp; Conditions of Makeez Restaurant. Please replace this text with your actual terms.</p>
+      <h2 class="text-xl font-semibold text-orange-500 mb-4">2. Use of Website</h2>
+      <p class="mb-4">By accessing this website, you agree to comply with and be bound by these terms.</p>
+      <h2 class="text-xl font-semibold text-orange-500 mb-4">3. Changes</h2>
+      <p class="mb-4">We reserve the right to update these terms at any time.</p>
+      <h2 class="text-xl font-semibold text-orange-500 mb-4">4. Contact</h2>
+      <p>For questions, please contact us at <a href="mailto:info@makeez.com" class="text-orange-600 hover:underline">info@makeez.com</a>.</p>
+    </section>
+    <a href="index.html" class="text-orange-600 font-semibold hover:underline pop-hover">&larr; Back to Home</a>
+  </main>
+  <footer class="shadow-inner py-4 text-center text-white text-xs mt-8" style="background: linear-gradient(90deg, #000 0%, #FFA500 50%, #FFD700 100%);">
+    &copy; 2025 Makeez Restaurant. All rights reserved.
+  </footer>
+  <script>
+    // Loader logic (on page load)
+    window.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 700);
+      }, 900);
+    });
+    // Show loader on navigation
+    document.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
+      document.querySelectorAll('a').forEach(link => {
+        const href = link.getAttribute('href');
+        // Only for internal links (not #, not external, not _blank)
+        if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && href !== '#' && !link.hasAttribute('target')) {
+          link.addEventListener('click', function(e) {
+            // Ignore if modifier keys are pressed (open in new tab/window)
+            if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            loader.style.display = 'flex';
+            loader.style.opacity = '1';
+          });
+        }
+      });
+    });
+  </script>
+  <nav class="sticky top-0 z-50 shadow-md" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);">
+    <div class="max-w-6xl mx-auto px-2 sm:px-4">
+      <div class="flex flex-wrap justify-between items-center h-20 md:h-24">
+        <div class="flex items-center fly-in pop-hover h-full">
+          <a href="index.html">
+            <img src="images/New Instagram Logo (Dec 2024).png" alt="Makeez Logo" class="h-16 md:h-20 w-auto object-contain" />
+          </a>
+        </div>
+        <div class="hidden md:flex space-x-6 sm:space-x-10 items-center h-full">
+          <a href="index.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Home</a>
+          <a href="menu.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Menu</a>
+          <a href="#about" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">About Us</a>
+          <a href="#locations" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Locations</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-yellow-400 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-2 sm:px-4 pb-4 space-y-1 bg-black">
+      <a href="index.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Home</a>
+      <a href="menu.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Menu</a>
+      <a href="#about" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">About Us</a>
+      <a href="#locations" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Locations</a>
+    </div>
+  </nav>
+</body>
+</html> 
