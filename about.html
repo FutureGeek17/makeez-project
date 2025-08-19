@@ -6,22 +6,38 @@
   <title>About Us - Makeez</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .btn-gold { padding: 0.6rem 1.1rem; border-radius: 9999px; background: #FFD700; color: #111; font-weight: 700; box-shadow: 0 8px 24px rgba(255,215,0,0.25); transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0,0.2,1); }
+    .btn-gold:hover { transform: translateY(-1px) scale(1.03); box-shadow: 0 12px 28px rgba(255,215,0,0.35); }
+    @keyframes logo-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .animate-logo-spin { animation: logo-spin 1.6s linear infinite; will-change: transform; }
+  </style>
 </head>
-<body class="min-h-screen flex flex-col bg-gradient-to-br from-orange-50 to-white">
+<body class="min-h-screen flex flex-col" style="background: radial-gradient(1000px circle at 20% 10%, rgba(191,161,0,0.03), rgba(191,161,0,0) 60%), repeating-linear-gradient(135deg, rgba(20,20,20,0.015) 0px, rgba(20,20,20,0.015) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 12px), linear-gradient(180deg, #faf7f2 0%, #efe8dd 100%); background-attachment: fixed;">
+  <!-- Loading Overlay -->
+  <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center transition-opacity duration-700" style="background: radial-gradient(1000px circle at 20% 10%, rgba(191,161,0,0.03), rgba(191,161,0,0) 60%), repeating-linear-gradient(135deg, rgba(20,20,20,0.015) 0px, rgba(20,20,20,0.015) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 12px), linear-gradient(180deg, #faf7f2 0%, #efe8dd 100%);">
+    <img src="LOGO 1.png" alt="Loading Logo" class="animate-logo-spin h-56 w-56 mb-8 drop-shadow-xl" />
+    <div class="relative w-64 h-2 rounded-full overflow-hidden bg-gray-800 border border-gray-700 shadow-lg">
+      <div class="absolute top-0 left-0 h-full w-full" style="animation: loader-bar-professional 1.6s cubic-bezier(0.4,0,0.2,1) infinite; position: absolute; top: 0; left: 0;">
+        <div class="h-full w-1/3" style="height:100%; width:33%; background: linear-gradient(90deg, rgba(255,215,0,0.0) 0%, #FFD700 50%, rgba(255,215,0,0.0) 100%); opacity: 0.7; filter: blur(0.5px) brightness(1.1); border-radius: 9999px;"></div>
+      </div>
+    </div>
+  </div>
   <!-- Sticky Navigation Bar (copied from index.html) -->
   <nav class="sticky top-0 z-50 shadow-md" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);">
     <div class="max-w-6xl mx-auto px-2 sm:px-4">
       <div class="flex flex-wrap justify-between items-center h-20 md:h-24">
         <div class="flex items-center fly-in pop-hover h-full">
           <a href="index.html">
-            <img src="images/New Instagram Logo (Dec 2024).png" alt="Makeez Logo" class="h-16 md:h-20 w-auto object-contain" />
+            <img src="LOGO 3.png" alt="Makeez Logo" class="navbar-logo h-32 md:h-44 w-auto object-contain transition-transform duration-200" />
           </a>
         </div>
         <div class="hidden md:flex space-x-6 sm:space-x-10 items-center h-full">
-          <a href="index.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Home</a>
-          <a href="menu.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Menu</a>
-          <a href="about.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">About Us</a>
-          <a href="locations.html" class="nav-underline text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Locations</a>
+          <a href="index.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75M4.5 10.5V21h6v-6h3v6h6V10.5"/></svg> Home</a>
+          <a href="menu.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16h16M5 16a7 7 0 0 1 14 0M12 8V6"/></svg> Menu</a>
+          <a href="about.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75h.01M12 12.75V18m9-6a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> About Us</a>
+          <a href="locations.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.5 7-10a7 7 0 10-14 0c0 5.5 7 10 7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Locations</a>
+          <a href="menu.html" class="ml-2 hidden lg:inline-flex btn-gold">Order Now</a>
         </div>
         <!-- Sandwich Bar Icon and Clean Dropdown (relative container) -->
         <div class="relative flex items-center">
@@ -47,30 +63,56 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden px-2 sm:px-4 pb-4 space-y-1 bg-black">
       <a href="index.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Home</a>
-      <a href="menu.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Menu</a>
+      <a href="menu.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover inline-flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16h16M5 16a7 7 0 0 1 14 0M12 8V6"/></svg> Menu</a>
       <a href="about.html" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">About Us</a>
       <a href="locations.html" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Locations</a>
     </div>
   </nav>
-  <!-- Gold Gradient Bar -->
-  <div class="w-full h-2 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 mb-2"></div>
   <!-- Main Content -->
-  <main class="flex-1 w-full max-w-3xl mx-auto py-12 px-4 sm:px-8">
-    <div class="bg-white rounded-2xl shadow-lg border-2 border-yellow-400 p-6 md:p-12 flex flex-col items-center">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center fly-in">About <span class="text-[#bfa100]">Makeez</span></h1>
-      <img src="images/wetransfer_menu-item-images_2025-07-08_1531/Truffle Burger.jpg" alt="Makeez Food" class="w-full max-w-md rounded-xl shadow mb-8 border-4 border-yellow-400 object-cover transition-transform duration-200 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-300/40 cursor-pointer fly-in" />
-      <p class="text-lg text-gray-700 leading-relaxed text-center mb-2 fly-in">Welcome to Makeez—Dubai's ultimate late-night kitchen for flavor seekers in Al Khawaneej and Za’abeel. Operating from 1 PM to the early hours, our no-frills, delivery-first concept brings gourmet-style burgers, juicy steaks, loaded fries, and fusion noodles right to your door.</p>
-      <p class="text-lg text-gray-700 leading-relaxed text-center mb-2 fly-in">Our crew is passionate about serving bold, crave-worthy comfort food made with care. From our famous Buffalo Chicken Sliders and Truffle Burger to cheesy Korean noodles and decadent desserts, every dish is designed to delight.</p>
-      <p class="text-lg text-gray-700 leading-relaxed text-center mb-2 fly-in">Makeez is the go-to spot for those midnight munchies. We combine top-quality ingredients, vibrant flavors, and seamless delivery to redefine fast food—no dine-in, no fuss, just flavor.</p>
-      <p class="text-lg text-gray-700 leading-relaxed text-center mb-8 fly-in">Craving something unforgettable? Order now and taste the Makeez difference.</p>
-      <div class="flex justify-center fly-in">
-        <a href="menu.html" class="px-8 py-3 bg-yellow-400 text-black rounded-full font-semibold shadow-lg hover:bg-yellow-500 transition-all text-lg">Order Now</a>
+  <main class="flex-1 w-full max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <!-- Hero/About Card -->
+    <section class="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-black/20 bg-white">
+      <div class="absolute inset-0" style="background: linear-gradient(45deg, rgba(240,148,51,0.08) 0%, rgba(230,104,60,0.08) 25%, rgba(220,39,67,0.08) 50%, rgba(204,35,102,0.08) 75%, rgba(188,24,136,0.08) 100%);"></div>
+      <div class="relative grid grid-cols-1 md:grid-cols-2">
+        <div class="p-8 sm:p-10 lg:p-12 flex flex-col justify-center items-start">
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/80 ring-1 ring-yellow-400/40 shadow">
+            <span class="h-2 w-2 rounded-full bg-yellow-400"></span>
+            <span class="text-xs uppercase tracking-widest text-gray-700">About Us</span>
+          </div>
+          <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900">Crafted With Fire. Served With Heart.</h1>
+          <p class="mt-3 text-base sm:text-lg text-gray-700">We’re a brisket-driven kitchen serving smash burgers, loaded fries, steaks and noodles. No fluff—just bold flavors made fresh to order.</p>
+          <p class="mt-2 text-base sm:text-lg text-gray-700">From late-night cravings to family feasts, our menu is built to hit the spot. Quality ingredients, proper technique, and that signature Makeez bite.</p>
+          <div class="mt-6 flex items-center gap-3">
+            <a href="menu.html" class="btn-gold">View Menu</a>
+            <a href="locations.html" class="px-4 py-2 rounded-full ring-1 ring-gray-300 text-gray-800 bg-white/80">Find Us</a>
+          </div>
+        </div>
+        <div class="relative h-64 sm:h-80 md:h-full">
+          <img src="Brisket Beef Burger.jpg" alt="Brisket Burger" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.0));"></div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Values/Highlights -->
+    <section class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="rounded-2xl bg-white/80 ring-1 ring-black/20 p-5 shadow">
+        <div class="text-yellow-600 font-extrabold text-xl">100%</div>
+        <div class="text-xs uppercase tracking-widest text-gray-600">Delight</div>
+      </div>
+      <div class="rounded-2xl bg-white/80 ring-1 ring-black/20 p-5 shadow">
+        <div class="text-yellow-600 font-extrabold text-xl">Handcut</div>
+        <div class="text-xs uppercase tracking-widest text-gray-600">Fries</div>
+      </div>
+      <div class="rounded-2xl bg-white/80 ring-1 ring-black/20 p-5 shadow">
+        <div class="text-yellow-600 font-extrabold text-xl">Brisket</div>
+        <div class="text-xs uppercase tracking-widest text-gray-600">Feast</div>
+      </div>
+    </section>
   </main>
   <!-- Footer -->
-  <footer class="shadow-inner py-8 text-white text-xs mt-8" style="background: #000;">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 text-left">
+  <footer class="shadow-inner py-10 text-white text-xs mt-8" style="background: #000;">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 text-left">
       <!-- Locations -->
       <div>
         <div class="font-semibold text-yellow-400 text-base mb-2">Our Locations</div>
@@ -82,6 +124,13 @@
         <div class="font-semibold text-yellow-400 text-base mb-2">Contact Us</div>
         <a href="tel:+971501234567" class="block text-white hover:text-yellow-400 hover:underline pop-hover mb-1">+971 50 123 4567</a>
         <a href="mailto:info@makeez.com" class="block text-white hover:text-yellow-400 hover:underline pop-hover">info@makeez.com</a>
+      </div>
+      <!-- Social -->
+      <div>
+        <div class="font-semibold text-yellow-400 text-base mb-2">Follow Us</div>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-white hover:text-yellow-400 hover:underline pop-hover">
+          <img src="New Instagram Logo (Dec 2024).png" alt="Instagram" class="h-6 w-6 object-contain" /> Instagram
+        </a>
       </div>
       <!-- Hours -->
       <div>
