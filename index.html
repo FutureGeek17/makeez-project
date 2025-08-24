@@ -206,33 +206,33 @@
   <!-- Sticky Navigation Bar -->
   <nav class="sticky top-0 z-50 shadow-md" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);">
     <div class="max-w-6xl mx-auto px-2 sm:px-4">
-      <div class="flex flex-wrap justify-between items-center h-20 md:h-24">
-        <div class="flex items-center fly-in h-full">
+      <div class="flex flex-nowrap justify-between items-center h-16 sm:h-20 md:h-24">
+        <div class="flex items-center fly-in h-full flex-shrink-0">
           <a href="index.html" class="focus:outline-none">
-            <img src="LOGO 3.png" alt="Makeez Logo" class="navbar-logo h-24 sm:h-28 md:h-40 lg:h-44 w-auto object-contain transition-transform duration-200" />
+            <img src="LOGO 3.png" alt="Makeez Logo" class="navbar-logo h-20 sm:h-24 md:h-40 lg:h-44 w-auto object-contain transition-transform duration-200" />
           </a>
         </div>
-        <div class="flex space-x-3 sm:space-x-6 items-center h-full overflow-x-auto">
-          <a href="index.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">
+        <div class="flex-1 min-w-0 mx-2 flex space-x-3 sm:space-x-6 items-center h-full overflow-x-auto whitespace-nowrap">
+          <a href="index.html" class="nav-underline inline-flex items-center gap-2 text-sm sm:text-base text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover flex-shrink-0">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75M4.5 10.5V21h6v-6h3v6h6V10.5"/></svg>
             Home
           </a>
-          <a href="menu.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">
+          <a href="menu.html" class="nav-underline inline-flex items-center gap-2 text-sm sm:text-base text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover flex-shrink-0">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16h16M5 16a7 7 0 0 1 14 0M12 8V6"/></svg>
             Menu
           </a>
-          <a href="about.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">
+          <a href="about.html" class="nav-underline inline-flex items-center gap-2 text-sm sm:text-base text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover flex-shrink-0">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75h.01M12 12.75V18m9-6a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             About Us
           </a>
-          <a href="locations.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">
+          <a href="locations.html" class="nav-underline inline-flex items-center gap-2 text-sm sm:text-base text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover flex-shrink-0">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.5 7-10a7 7 0 10-14 0c0 5.5 7 10 7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
             Locations
           </a>
           <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="ml-2 hidden lg:inline-flex btn-gold">Order Now</a>
         </div>
         <!-- Sandwich Bar Icon and Clean Dropdown (relative container) -->
-        <div class="relative flex items-center">
+        <div class="relative flex items-center flex-shrink-0 ml-2">
           <button id="sandwich-bar-btn" class="ml-4 flex items-center justify-center h-12 w-12 rounded-full hover:bg-gray-100 focus:outline-none" aria-label="Sandwich Bar">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>
@@ -562,7 +562,7 @@
     </div>
   </section>
 
-    
+
   <script>
     // Mobile menu toggle
     const btn = document.getElementById('mobile-menu-btn');
