@@ -10,50 +10,100 @@
     .pop-hover:hover, .pop-hover:focus { transform: scale(1.07); box-shadow: 0 6px 24px 0 rgba(255,215,0,0.15); z-index: 1; }
     body { background: #fff; }
     header, main, section, footer { background: #fff; }
-    h1, h2, h3 { color: #FFD700 !important; }
-    .text-orange-600, .text-orange-500 { color: #FFD700 !important; }
+    h1, h2, h3 { color: #111 !important; }
+    .text-orange-600, .text-orange-500 { color: #111 !important; }
     .border-orange-100, .border-orange-500 { border-color: #FFD700 !important; }
     .bg-orange-50, .bg-orange-100 { background: #fff !important; }
     .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500 { color: #111 !important; }
     .bg-white { background: #fff !important; }
     .shadow-inner, .shadow, .shadow-md { box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07); }
-    a.text-orange-600, a.text-orange-500 { color: #FFD700 !important; }
+    a.text-orange-600, a.text-orange-500 { color: #111 !important; }
     a.text-orange-600:hover, a.text-orange-500:hover { color: #111 !important; }
+    .btn-gold { padding: 0.6rem 1.1rem; border-radius: 9999px; background: #FFD700; color: #111; font-weight: 700; box-shadow: 0 8px 24px rgba(255,215,0,0.25); }
+    .navbar-logo:hover, .navbar-logo:focus { outline: none; }
+    /* Loader + logo animations to match home */
+    
   </style>
 </head>
 <body class="min-h-screen flex flex-col" style="background: radial-gradient(1000px circle at 20% 10%, rgba(191,161,0,0.03), rgba(191,161,0,0) 60%), repeating-linear-gradient(135deg, rgba(20,20,20,0.015) 0px, rgba(20,20,20,0.015) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 12px), linear-gradient(180deg, #faf7f2 0%, #efe8dd 100%); background-attachment: fixed;">
-  <!-- Loading Overlay -->
-  <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center transition-opacity duration-700" style="background: radial-gradient(1000px circle at 20% 10%, rgba(191,161,0,0.03), rgba(191,161,0,0) 60%), repeating-linear-gradient(135deg, rgba(20,20,20,0.015) 0px, rgba(20,20,20,0.015) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 12px), linear-gradient(180deg, #faf7f2 0%, #efe8dd 100%);">
-    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-orange-500 border-b-4 border-orange-200 mb-6"></div>
-    <span class="text-2xl font-bold text-orange-500 tracking-wide">TastyBites</span>
-  </div>
-  <header class="bg-white shadow-md py-6 px-4 text-center">
-    <h1 class="text-3xl font-bold text-orange-600">Terms &amp; Conditions</h1>
-  </header>
-  <main class="flex-1 max-w-3xl mx-auto py-10 px-4">
-    <section class="bg-white rounded-lg shadow p-6 mb-8">
-      <h2 class="text-xl font-semibold text-orange-500 mb-4">1. Introduction</h2>
-      <p class="mb-4">This is a placeholder for the Terms &amp; Conditions of Makeez Restaurant. Please replace this text with your actual terms.</p>
-      <h2 class="text-xl font-semibold text-orange-500 mb-4">2. Use of Website</h2>
-      <p class="mb-4">By accessing this website, you agree to comply with and be bound by these terms.</p>
-      <h2 class="text-xl font-semibold text-orange-500 mb-4">3. Changes</h2>
-      <p class="mb-4">We reserve the right to update these terms at any time.</p>
-      <h2 class="text-xl font-semibold text-orange-500 mb-4">4. Contact</h2>
-      <p>For questions, please contact us at <a href="mailto:info@makeez.com" class="text-orange-600 hover:underline">info@makeez.com</a>.</p>
+  <!-- No loader for this page -->
+  <nav class="sticky top-0 z-50 shadow-md" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);">
+    <div class="max-w-6xl mx-auto px-2 sm:px-4">
+      <div class="flex flex-wrap justify-between items-center h-20 md:h-24">
+        <div class="flex items-center fly-in h-full">
+          <a href="index.html" class="focus:outline-none">
+            <img src="LOGO 3.png" alt="Makeez Logo" class="navbar-logo h-32 md:h-44 w-auto object-contain" />
+          </a>
+        </div>
+        <div class="hidden md:flex space-x-6 sm:space-x-10 items-center h-full">
+          <a href="index.html" class="inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium">Home</a>
+          <a href="menu.html" class="inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium">Menu</a>
+          <a href="about.html" class="inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium">About Us</a>
+          <a href="locations.html" class="inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium">Locations</a>
+          <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="ml-2 hidden lg:inline-flex btn-gold">Order Now</a>
+        </div>
+        <!-- Sandwich Bar Icon and Clean Dropdown (relative container) -->
+        <div class="relative flex items-center">
+          <button id="sandwich-bar-btn" class="ml-4 flex items-center justify-center h-12 w-12 rounded-full hover:bg-gray-100 focus:outline-none" aria-label="Sandwich Bar">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+          <!-- Clean Dropdown Menu -->
+          <div id="sandwich-dropdown" class="hidden absolute right-0 top-full mt-2 w-52 rounded-xl shadow-lg bg-white z-50 border border-black">
+            <a href="index.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">Home</a>
+            <a href="menu.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">Menu</a>
+            <a href="about.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">About Us</a>
+            <a href="locations.html" class="block px-6 py-3 text-black hover:bg-gray-100 font-medium rounded-lg transition-all duration-150">Locations</a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-gold-600 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-2 sm:px-4 pb-4 space-y-1 bg-black">
+      <a href="index.html" class="block py-3 text-base sm:text-lg text-white font-medium">Home</a>
+      <a href="menu.html" class="block py-3 text-base sm:text-lg text-white font-medium">Menu</a>
+      <a href="about.html" class="block py-2 text-base sm:text-lg text-white font-medium">About Us</a>
+      <a href="locations.html" class="block py-2 text-base sm:text-lg text-white font-medium">Locations</a>
+    </div>
+  </nav>
+  <main class="flex-1 w-full max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Terms &amp; Conditions</h1>
+      <p class="mt-2 text-gray-700">Last updated: Jan 1, 2025</p>
+    </div>
+    <section class="bg-white rounded-2xl ring-1 ring-black/10 shadow p-6 sm:p-8 mb-8">
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">1. Introduction</h2>
+      <p class="text-gray-700 mb-4">These Terms &amp; Conditions govern your use of the Makeez website. By accessing or using the site, you agree to be bound by these Terms.</p>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">2. Use of Website</h2>
+      <p class="text-gray-700 mb-4">You agree not to misuse the website, attempt unauthorized access, or engage in activity that interferes with proper operation.</p>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">3. Content &amp; Accuracy</h2>
+      <p class="text-gray-700 mb-4">We strive to keep all information accurate and up to date, but menu items, prices, and availability may change without prior notice.</p>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">4. Orders &amp; Third-Party Platforms</h2>
+      <p class="text-gray-700 mb-4">Orders may be fulfilled via third-party delivery platforms. Their terms and privacy policies apply to those transactions.</p>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">5. Intellectual Property</h2>
+      <p class="text-gray-700 mb-4">All trademarks, logos, and content on this site are the property of Makeez or their respective owners. You may not reproduce without permission.</p>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">6. Limitation of Liability</h2>
+      <p class="text-gray-700 mb-4">To the maximum extent permitted by law, Makeez is not liable for indirect, incidental, or consequential damages arising from the use of this site.</p>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">7. Changes to These Terms</h2>
+      <p class="text-gray-700 mb-4">We may update these Terms from time to time. Continued use constitutes acceptance of the revised Terms.</p>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">8. Contact Us</h2>
+      <p class="text-gray-700">Questions? Email <a href="mailto:makeezrestaurant@gmail.com" class="text-orange-600 hover:underline">makeezrestaurant@gmail.com</a>.</p>
     </section>
-    <a href="index.html" class="text-orange-600 font-semibold hover:underline pop-hover">&larr; Back to Home</a>
+    <div class="text-center">
+      <a href="index.html" class="inline-flex btn-gold">Back to Home</a>
+    </div>
   </main>
   <footer class="shadow-inner py-10 text-white text-xs mt-8" style="background: #000;">
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 text-left">
       <div>
-        <div class="font-semibold text-yellow-400 text-base mb-2">Our Locations</div>
-        <a href="https://maps.google.com/?q=6FP9%2BW2F%20-%20Al%20Khawaneej%201%20-%20Dubai" target="_blank" rel="noopener" class="block text-white hover:text-yellow-400 hover:underline pop-hover mb-1">Makeez Al Khawaneej</a>
-        <a href="https://maps.google.com/?q=Za%E2%80%99abeel%2C%20Dubai" target="_blank" rel="noopener" class="block text-white hover:text-yellow-400 hover:underline pop-hover">Makeez Za'abeel</a>
-      </div>
-      <div>
         <div class="font-semibold text-yellow-400 text-base mb-2">Contact Us</div>
-        <a href="tel:+971501234567" class="block text-white hover:text-yellow-400 hover:underline pop-hover mb-1">+971 50 123 4567</a>
-        <a href="mailto:info@makeez.com" class="block text-white hover:text-yellow-400 hover:underline pop-hover">info@makeez.com</a>
+        <a href="tel:+971509128193" class="block text-white hover:text-yellow-400 hover:underline pop-hover mb-1">+971 50 912 8193</a>
+        <a href="mailto:makeezrestaurant@gmail.com" class="block text-white hover:text-yellow-400 hover:underline pop-hover">makeezrestaurant@gmail.com</a>
       </div>
       <div>
         <div class="font-semibold text-yellow-400 text-base mb-2">Follow Us</div>
@@ -65,63 +115,15 @@
         <div class="font-semibold text-yellow-400 text-base mb-2">Opening Hours</div>
         <div class="text-white">10:00 AM – 12:00 AM</div>
       </div>
+      <div>
+        <div class="font-semibold text-yellow-400 text-base mb-2">Our Locations</div>
+        <a href="https://maps.google.com/?q=6FP9%2BW2F%20-%20Al%20Khawaneej%20-%20Al%20Khawaneej%201%20-%20Dubai" target="_blank" rel="noopener" class="block text-white hover:text-yellow-400 hover:underline pop-hover mb-1">Makeez Al Khawaneej</a>
+        <a href="https://maps.google.com/?q=Za%E2%80%99abeel%2C%20Dubai" target="_blank" rel="noopener" class="block text-white hover:text-yellow-400 hover:underline pop-hover">Makeez Za'abeel (ghost kitchen)</a>
+      </div>
     </div>
     <div class="border-t border-gray-800 mt-8 pt-4 text-center text-gray-400 text-xs">&copy; 2025 Makeez Restaurant. All rights reserved.</div>
   </footer>
-  <script>
-    // Loader logic (on page load)
-    window.addEventListener('DOMContentLoaded', () => {
-      const loader = document.getElementById('loader');
-      setTimeout(() => {
-        loader.style.opacity = '0';
-        setTimeout(() => loader.style.display = 'none', 700);
-      }, 900);
-    });
-    // Show loader on navigation
-    document.addEventListener('DOMContentLoaded', () => {
-      const loader = document.getElementById('loader');
-      document.querySelectorAll('a').forEach(link => {
-        const href = link.getAttribute('href');
-        // Only for internal links (not #, not external, not _blank)
-        if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && href !== '#' && !link.hasAttribute('target')) {
-          link.addEventListener('click', function(e) {
-            // Ignore if modifier keys are pressed (open in new tab/window)
-            if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
-            loader.style.display = 'flex';
-            loader.style.opacity = '1';
-          });
-        }
-      });
-    });
-  </script>
-  <nav class="sticky top-0 z-50 shadow-md" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);">
-    <div class="max-w-6xl mx-auto px-2 sm:px-4">
-      <div class="flex flex-wrap justify-between items-center h-20 md:h-24">
-        <div class="flex items-center fly-in pop-hover h-full">
-          <a href="index.html">
-            <img src="LOGO 3.png" alt="Makeez Logo" class="navbar-logo h-32 md:h-44 w-auto object-contain transition-transform duration-200" />
-          </a>
-        </div>
-        <div class="hidden md:flex space-x-6 sm:space-x-10 items-center h-full">
-          <a href="index.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75M4.5 10.5V21h6v-6h3v6h6V10.5"/></svg> Home</a>
-          <a href="menu.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16h16M5 16a7 7 0 0 1 14 0M12 8V6"/></svg> Menu</a>
-          <a href="about.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75h.01M12 12.75V18m9-6a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> About Us</a>
-          <a href="locations.html" class="nav-underline inline-flex items-center gap-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.5 7-10a7 7 0 10-14 0c0 5.5 7 10 7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Locations</a>
-          <a href="menu.html" class="ml-2 hidden lg:inline-flex btn-gold">Order Now</a>
-        </div>
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-btn" class="text-yellow-400 focus:outline-none">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div id="mobile-menu" class="md:hidden hidden px-2 sm:px-4 pb-4 space-y-1 bg-black">
-      <a href="index.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Home</a>
-      <a href="menu.html" class="block nav-underline py-3 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover inline-flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16h16M5 16a7 7 0 0 1 14 0M12 8V6"/></svg> Menu</a>
-      <a href="about.html" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">About Us</a>
-      <a href="locations.html" class="block nav-underline py-2 text-base sm:text-lg text-white font-medium transition-colors duration-200 hover:text-orange-500 fly-in pop-hover">Locations</a>
-    </div>
-  </nav>
+  
+  
 </body>
 </html> 
