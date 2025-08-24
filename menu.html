@@ -14,11 +14,11 @@
     .pop-hover:hover, .pop-hover:focus { transform: scale(1.04); box-shadow: 0 6px 24px 0 rgba(255,215,0,0.15); z-index: 1; }
     .menu-frame { background: #fff; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.16s ease, box-shadow 0.16s ease; border: 0; content-visibility: auto; contain-intrinsic-size: 300px 380px; }
     .menu-frame:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
-    .menu-img { background: linear-gradient(180deg, #fff8e7 0%, #fff1c8 100%); display: flex; align-items: center; justify-content: center; height: 160px; border-bottom: 0; overflow: hidden; position: relative; contain: content; }
-    /* Reserve space to prevent layout shifts before lazy images load */
-    .menu-img::before { content: ""; display: block; padding-bottom: 60%; }
+    .menu-img { background: linear-gradient(180deg, #fff8e7 0%, #fff1c8 100%); display: flex; align-items: center; justify-content: center; height: 180px; border-bottom: 0; overflow: hidden; position: relative; contain: content; }
+    /* Reserve space; slightly taller for more natural look */
+    .menu-img::before { content: ""; display: block; padding-bottom: 66%; }
     .menu-img.tall { height: 220px; }
-    .menu-img img { max-height: 100%; max-width: 100%; object-fit: cover; will-change: auto; position: absolute; inset: 0; width: 100%; height: 100%; }
+    .menu-img img { width: 100%; height: 100%; object-fit: contain; object-position: center; position: absolute; inset: 0; }
     .menu-placeholder { color: #FFD700; font-size: 2.5rem; }
     .navbar-logo:hover, .navbar-logo:focus { transform: scale(1.09); outline: none; }
     .flip-x { transform: scaleX(-1); }
@@ -134,7 +134,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Burgers</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6" style="contain: content;">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" style="contain: content;">
         <div class="menu-frame fly-in"><div class="menu-img"><img src="Truffle Burger.jpg" alt="Truffle Burger" class="object-cover w-full h-48 rounded-t-lg" loading="lazy" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Truffle Burger</h3><div class="text-base font-bold text-yellow-600">27 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Makeez Chicken Burger 2.jpg" alt="Makeez Chicken Burger 2" class="object-cover w-full h-48 rounded-t-lg" loading="lazy" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Makeez Chicken Burger</h3><div class="text-base font-bold text-yellow-600">26 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Lions Burger.jpg" alt="Lions Burger" class="object-cover w-full h-48 rounded-t-lg" loading="lazy" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Lions Burger</h3><div class="text-base font-bold text-yellow-600">36 <span class="font-normal">AED</span></div></div></div>
@@ -150,7 +150,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Fries & Sides</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6" style="contain: content;">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" style="contain: content;">
         <div class="menu-frame"><div class="menu-img"><img src="Patty On Fries.jpg" alt="Patty On Fries" class="object-cover w-full h-48 rounded-t-lg" loading="lazy" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Patty On Fries</h3><div class="text-base font-bold text-yellow-600">35 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Brisket Fries.jpg" alt="Brisket Fries" class="object-cover w-full h-48 rounded-t-lg" loading="lazy" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Brisket Fries</h3><div class="text-base font-bold text-yellow-600">27 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Truffle Fries.jpg" alt="Truffle Fries" class="object-cover w-full h-48 rounded-t-lg" loading="lazy" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Truffle Fries</h3><div class="text-base font-bold text-yellow-600">19 <span class="font-normal">AED</span></div></div></div>
@@ -168,7 +168,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Loaded/Party Boxes</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6" style="contain: content;">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" style="contain: content;">
         <div class="menu-frame"><div class="menu-img"><img src="Mini's Party Box.png" alt="Mini's Party Box" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Mini's Party Box</h3><div class="text-base font-bold text-yellow-600">102 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Appetizer's Box.png" alt="Appetizer's Box" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Appetizer Fiesta</h3><div class="text-base font-bold text-yellow-600">71 <span class="font-normal">AED</span></div></div></div>
       </div>
@@ -178,7 +178,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Sandwiches & Shawarma</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6" style="contain: content;">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" style="contain: content;">
         <div class="menu-frame"><div class="menu-img tall"><img src="Philly Steak Sandwich (Half-Cut).jpg" alt="Philly Steak Sandwich (Half-Cut)" class="object-cover w-full h-full rounded-t-lg" loading="lazy" decoding="async" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Philly Steak Sandwich (Half-Cut)</h3><div class="text-base font-bold text-yellow-600">40 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img tall"><img src="Brisket Shawarma.jpg" alt="Brisket Shawarma" class="absolute inset-0 w-full h-full object-cover transform -rotate-90 origin-center" loading="lazy" decoding="async" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Brisket Shawarma</h3><div class="text-base font-bold text-yellow-600">21 <span class="font-normal">AED</span></div></div></div>
       </div>
@@ -188,7 +188,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Noodles</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         <div class="menu-frame"><div class="menu-img"><img src="Spicy Chicken Korean Noodles.jpg" alt="Spicy Chicken Korean Noodles" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Spicy Chicken Korean Noodles</h3><div class="text-base font-bold text-yellow-600">37 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Grilled Hotdog Korean Noodles.jpg" alt="Grilled Hotdog Korean Noodles" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Grilled Hotdog Korean Noodles</h3><div class="text-base font-bold text-yellow-600">35 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Cheesy Korean Noodles.jpg" alt="Cheesy Korean Noodles" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Cheesy Korean Noodles</h3><div class="text-base font-bold text-yellow-600">29.00 <span class="font-normal">AED</span></div></div></div>
@@ -220,7 +220,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Mac & Cheese</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" style="contain: content;">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" style="contain: content;">
         <div class="menu-frame"><div class="menu-img"><img src="Brisket Mac & Cheese.jpg" alt="Brisket Mac & Cheese" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Brisket Mac & Cheese</h3><div class="text-base font-bold text-yellow-600">21 <span class="font-normal">AED</span></div></div></div>
       </div>
     </section>
@@ -229,7 +229,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Sliders</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" style="contain: content;">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" style="contain: content;">
         <div class="menu-frame"><div class="menu-img"><img src="Makeez Chicken Sliders.jpg" alt="Makeez Chicken Sliders" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Makeez Chicken Sliders</h3><div class="text-base font-bold text-yellow-600">26 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Buffalo Chicken Sliders.jpg" alt="Buffalo Chicken Sliders" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Buffalo Chicken Sliders</h3><div class="text-base font-bold text-yellow-600">26 <span class="font-normal">AED</span></div></div></div>
       </div>
@@ -239,7 +239,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Wings</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" style="contain: content;">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" style="contain: content;">
         <div class="menu-frame"><div class="menu-img"><img src="Buffalo Boneless Chicken Wings 6 pcs.jpg" alt="Buffalo Boneless Chicken Wings 6 pcs" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Buffalo Boneless Chicken Wings 6 pcs</h3><div class="text-base font-bold text-yellow-600">26 <span class="font-normal">AED</span></div></div></div>
       </div>
     </section>
@@ -248,7 +248,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Cold Drinks</h2>
         <a href="https://linktr.ee/makeezrestaurant?utm_source=qr_code&utm_medium=desktop_profile" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-gold">Order</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div class="menu-frame"><div class="menu-img"><img src="Sprite.jpg" alt="Sprite" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Sprite</h3><div class="text-base font-bold text-yellow-600">5 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Coke.jpg" alt="Coke" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Coke</h3><div class="text-base font-bold text-yellow-600">5 <span class="font-normal">AED</span></div></div></div>
         <div class="menu-frame"><div class="menu-img"><img src="Coke Zero.jpg" alt="Coke Zero" class="object-cover w-full h-48 rounded-t-lg" /></div><div class="p-5"><h3 class="text-lg font-semibold text-gray-800 mb-2">Coke Zero</h3><div class="text-base font-bold text-yellow-600">5 <span class="font-normal">AED</span></div></div></div>
